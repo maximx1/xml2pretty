@@ -29,7 +29,7 @@ class JeCommande:
     """
     @staticmethod
     def printError():
-        print("Usage -> python xml2pretty [input_file.xml] > [output_file.xml]")
+        print("Usage -> python xml2pretty [input_file.xml] [output_file.xml]")
     
     """
         For reading from file and printing to screen.

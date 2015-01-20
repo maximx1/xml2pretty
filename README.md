@@ -9,4 +9,4 @@ Quick and dirty command line util to help format xml.
 `python xml2pretty [input_file.xml]`
 
 ##### to file
-`python xml2pretty [input_file.xml] > [output_file.xml]`
+`python xml2pretty [input_file.xml] [output_file.xml]`
