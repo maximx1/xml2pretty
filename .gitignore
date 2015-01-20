@@ -2,3 +2,4 @@
 .pydevproject
 out.xml
 test.html
+*.pyc
