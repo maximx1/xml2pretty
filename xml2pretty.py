@@ -1,4 +1,5 @@
 import sys
+import re
 from xml.dom import minidom
 
 """
@@ -37,7 +38,7 @@ class JeCommande:
     @staticmethod
     def inOnly():
         with open (sys.argv[1], "r") as inFile:
-            print(XMLFormatter.beautifyXMLString(inFile.read().replace('\n', '')))
+            print(XMLFormatter.beautifyXMLString(re.sub('[\n\t]', '', inFile.read())))
         
     """
         For reading from and writing to file.
@@ -46,7 +47,7 @@ class JeCommande:
     def inAndOut():
         with open (sys.argv[1], "r") as inFile:
             with open (sys.argv[2], "w") as outFile:
-                outFile.write(XMLFormatter.beautifyXMLString(inFile.read().replace('\n', '')))
+                outFile.write(XMLFormatter.beautifyXMLString(re.sub('[\n\t]', '', inFile.read())))
 
 # Run that shtuff            
 JeCommande.run()
